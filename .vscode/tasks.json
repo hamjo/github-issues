@@ -4,13 +4,33 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Inherited Test Name",
+            "label": "NUnit - Inherited Test Name",
             "type": "shell",
             "command": "dotnet",
+            "options": {
+                "cwd": "${workspaceFolder}/nunit/inherited-test-name"
+            },
             "args": [
                 "test",
                 "--settings",
-                "${workspaceFolder}/nunit.runsettings",
+                "nunit.runsettings",
+                "--logger",
+                "trx"
+            ],
+            "group": "test",
+            "problemMatcher": []
+        },
+        {
+            "label": "NUnit - Named Parameter Name",
+            "type": "shell",
+            "command": "dotnet",
+            "options": {
+                "cwd": "${workspaceFolder}/nunit/named-parameter-name"
+            },
+            "args": [
+                "test",
+                "--settings",
+                "nunit.runsettings",
                 "--logger",
                 "trx"
             ],
